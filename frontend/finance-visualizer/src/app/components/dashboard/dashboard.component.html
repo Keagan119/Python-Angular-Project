@@ -1,0 +1,186 @@
+<div class="dashboard">
+ 
+  <div class="stats-grid">
+   
+    <div *ngIf="isLoading" class="loading-state">
+      <div class="stat-card">
+        <div class="skeleton"></div>
+      </div>
+      <div class="stat-card">
+        <div class="skeleton"></div>
+      </div>
+      <div class="stat-card">
+        <div class="skeleton"></div>
+      </div>
+      <div class="stat-card">
+        <div class="skeleton"></div>
+      </div>
+    </div>
+    
+ 
+    <div *ngIf="error" class="error-state">
+      <div class="stat-card" style="grid-column: 1 / -1;">
+        <div style="color: var(--danger-color); text-align: center;">
+          {{ error }}
+        </div>
+      </div>
+    </div>
+    
+   
+    <div class="stat-card" *ngIf="!isLoading">
+      <div class="stat-label">Total Income</div>
+      <div class="stat-value" style="color: var(--success-color);">${{ (kpis?.total_income || 0) | number:'1.2-2' }}</div>
+      <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">This month</div>
+    </div>
+    
+    <div class="stat-card" *ngIf="!isLoading">
+      <div class="stat-label">Total Expenses</div>
+      <div class="stat-value" style="color: var(--danger-color);">${{ (kpis?.total_expenses || 0) | number:'1.2-2' }}</div>
+      <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">This month</div>
+    </div>
+    
+    <div class="stat-card" *ngIf="!isLoading">
+      <div class="stat-label">Net Balance</div>
+      <div class="stat-value" style="color: var(--primary-color);">${{ (kpis?.net_balance || 0) | number:'1.2-2' }}</div>
+      <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">This month</div>
+    </div>
+    
+    <div class="stat-card" *ngIf="!isLoading">
+      <div class="stat-label">Average Transaction</div>
+      <div class="stat-value">${{ (kpis?.avg_transaction || 0) | number:'1.2-2' }}</div>
+      <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">{{ kpis?.transaction_count || 0 }} transactions</div>
+    </div>
+  </div>
+
+ 
+  <div class="card">
+    <h3>Quick Actions</h3>
+    <div class="grid grid-cols-2" style="margin-top: 1.5rem;">
+      <button class="btn btn-primary" (click)="addTransaction()">
+        <span>+</span>
+        <span>Add Transaction</span>
+      </button>
+      <a routerLink="/transactions" class="btn btn-secondary">
+        <span>📋</span>
+        <span>View All Transactions</span>
+      </a>
+      <a routerLink="/categories" class="btn btn-secondary">
+        <span>📊</span>
+        <span>Category Breakdown</span>
+      </a>
+      <a routerLink="/trends" class="btn btn-secondary">
+        <span>📈</span>
+        <span>Spending Trends</span>
+      </a>
+    </div>
+  </div>
+
+ 
+  <div class="grid grid-cols-2" style="margin-top: 2rem;">
+   
+    <div class="card">
+      <h3>Recent Transactions</h3>
+      <div class="transaction-list" style="margin-top: 1rem;">
+        <div class="transaction-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">🛒</span>
+            <div>
+              <div style="font-weight: 600;">Grocery Store</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary);">Today, 2:30 PM</div>
+            </div>
+          </div>
+          <div style="font-weight: 600; color: var(--danger-color);">-$125.50</div>
+        </div>
+        
+        <div class="transaction-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">💰</span>
+            <div>
+              <div style="font-weight: 600;">Salary Deposit</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary);">Yesterday, 9:00 AM</div>
+            </div>
+          </div>
+          <div style="font-weight: 600; color: var(--success-color);">+$3,500.00</div>
+        </div>
+        
+        <div class="transaction-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">⚡</span>
+            <div>
+              <div style="font-weight: 600;">Electric Bill</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary);">2 days ago</div>
+            </div>
+          </div>
+          <div style="font-weight: 600; color: var(--danger-color);">-$89.00</div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <a routerLink="/transactions" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+          View All Transactions
+        </a>
+      </div>
+    </div>
+
+   
+    <div class="card">
+      <h3>Spending Insights</h3>
+      <div style="margin-top: 1rem;">
+        <div class="insight-item" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: var(--warning-color);">⚠️</span>
+            <span style="font-weight: 600;">Unusual Spending Detected</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">
+            Your dining expenses are 45% higher than usual this month. Consider reviewing your restaurant spending.
+          </p>
+        </div>
+        
+        <div class="insight-item" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: var(--success-color);">✅</span>
+            <span style="font-weight: 600;">Great Job on Savings!</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">
+            You've saved 24% of your income this month, exceeding your goal of 20%.
+          </p>
+        </div>
+        
+        <div class="insight-item">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: var(--primary-color);">📊</span>
+            <span style="font-weight: 600;">Top Category</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">
+            Housing remains your biggest expense at 35% of total spending.
+          </p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <a routerLink="/alerts" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          View All Insights
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" style="margin-top: 2rem;">
+    <h3>Monthly Overview</h3>
+    <div class="grid grid-cols-3" style="margin-top: 1.5rem;">
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--success-color);">${{ (kpis?.total_income || 0) | number:'1.2-2' }}</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Income</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--danger-color);">${{ (kpis?.total_expenses || 0) | number:'1.2-2' }}</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Expenses</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-color);">${{ (kpis?.net_balance || 0) | number:'1.2-2' }}</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Net Balance</div>
+      </div>
+    </div>
+  </div>
+</div>
