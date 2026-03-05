@@ -1,0 +1,214 @@
+<div class="alerts">
+ 
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Active Alerts</div>
+      <div class="stat-value">3</div>
+      <div class="stat-change negative">
+        <span>↑</span>
+        <span>2 new today</span>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-label">Resolved This Week</div>
+      <div class="stat-value">5</div>
+      <div class="stat-change positive">
+        <span>↑</span>
+        <span>+3 from last week</span>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-label">Potential Savings</div>
+      <div class="stat-value">$245</div>
+      <div class="stat-change positive">
+        <span>↑</span>
+        <span>If acted upon</span>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-label">Alert Score</div>
+      <div class="stat-value">7.2/10</div>
+      <div class="stat-change positive">
+        <span>↑</span>
+        <span>Good financial health</span>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="card">
+    <h3>Active Alerts</h3>
+    <div class="alerts-list" style="margin-top: 1.5rem;">
+      
+      <div class="alert alert-danger" style="margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.25rem;">🚨</span>
+              <span style="font-weight: 600;">Unusual Spending Pattern Detected</span>
+              <span style="background: var(--danger-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">HIGH</span>
+            </div>
+            <p style="margin-bottom: 0.5rem;">
+              Your dining expenses are 45% higher than your 3-month average. You've spent $820 on restaurants this month compared to your usual $565.
+            </p>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">
+              Detected 2 hours ago • Based on 3-month spending patterns
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="margin-left: 1rem;">Dismiss</button>
+        </div>
+      </div>
+
+    
+      <div class="alert alert-warning" style="margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.25rem;">⚠️</span>
+              <span style="font-weight: 600;">Subscription Overload</span>
+              <span style="background: var(--warning-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">MEDIUM</span>
+            </div>
+            <p style="margin-bottom: 0.5rem;">
+              You have 7 active subscriptions totaling $127/month. Consider reviewing unused services to save up to $45/month.
+            </p>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">
+              Detected yesterday • Monthly subscription analysis
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="margin-left: 1rem;">Review</button>
+        </div>
+      </div>
+
+   
+      <div class="alert alert-success" style="margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.25rem;">✅</span>
+              <span style="font-weight: 600;">Savings Goal Achieved</span>
+              <span style="background: var(--success-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">INFO</span>
+            </div>
+            <p style="margin-bottom: 0.5rem;">
+              Congratulations! You've exceeded your monthly savings goal of 20% by achieving a 24% savings rate. Keep up the great work!
+            </p>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">
+              Detected today • Goal tracking analysis
+            </div>
+          </div>
+          <button class="btn btn-primary" style="margin-left: 1rem;">Celebrate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="grid grid-cols-2" style="margin-top: 2rem;">
+   
+    <div class="card">
+      <h3>Alert Preferences</h3>
+      <div style="margin-top: 1.5rem;">
+        <div class="setting-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div>
+            <div style="font-weight: 600;">Unusual Spending Detection</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">Alert when spending exceeds 25% of normal</div>
+          </div>
+          <label style="position: relative; display: inline-block; width: 50px; height: 24px;">
+            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--primary-color); transition: .4s; border-radius: 24px;"></span>
+            <span style="position: absolute; content: ''; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+          </label>
+        </div>
+
+        <div class="setting-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div>
+            <div style="font-weight: 600;">Budget Alerts</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">Notify when reaching 80% of budget</div>
+          </div>
+          <label style="position: relative; display: inline-block; width: 50px; height: 24px;">
+            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--primary-color); transition: .4s; border-radius: 24px;"></span>
+            <span style="position: absolute; content: ''; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+          </label>
+        </div>
+
+        <div class="setting-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div>
+            <div style="font-weight: 600;">Subscription Monitoring</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">Track and analyze recurring payments</div>
+          </div>
+          <label style="position: relative; display: inline-block; width: 50px; height: 24px;">
+            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--primary-color); transition: .4s; border-radius: 24px;"></span>
+            <span style="position: absolute; content: ''; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+          </label>
+        </div>
+
+        <div class="setting-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+          <div>
+            <div style="font-weight: 600;">Weekly Summary</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">Get weekly spending insights</div>
+          </div>
+          <label style="position: relative; display: inline-block; width: 50px; height: 24px;">
+            <input type="checkbox" style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--border-color); transition: .4s; border-radius: 24px;"></span>
+            <span style="position: absolute; content: ''; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="card">
+      <h3>Recent Resolutions</h3>
+      <div style="margin-top: 1.5rem;">
+        <div class="resolution-item" style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-weight: 600; color: var(--success-color);">✓ Budget Goal Met</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                Successfully stayed under entertainment budget
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Resolved 3 days ago
+              </div>
+            </div>
+            <span style="background: var(--success-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">SUCCESS</span>
+          </div>
+        </div>
+
+        <div class="resolution-item" style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-weight: 600; color: var(--warning-color);">✓ Subscription Cancelled</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                Cancelled unused streaming service ($15.99/month)
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Resolved 1 week ago
+              </div>
+            </div>
+            <span style="background: var(--warning-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">ACTION</span>
+          </div>
+        </div>
+
+        <div class="resolution-item" style="padding: 1rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div style="font-weight: 600; color: var(--success-color);">✓ Spending Reduced</div>
+              <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                Cut dining expenses by 20% after alert
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Resolved 2 weeks ago
+              </div>
+            </div>
+            <span style="background: var(--success-color); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">IMPROVEMENT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
