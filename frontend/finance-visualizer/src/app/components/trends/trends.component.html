@@ -1,0 +1,210 @@
+<div class="trends">
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <h3>Spending Trends</h3>
+      <div class="period-selector" style="display: flex; gap: 0.5rem;">
+        <button class="btn btn-secondary">1W</button>
+        <button class="btn btn-secondary">1M</button>
+        <button class="btn btn-primary">3M</button>
+        <button class="btn btn-secondary">6M</button>
+        <button class="btn btn-secondary">1Y</button>
+      </div>
+    </div>
+
+   
+    <div class="chart-container" style="height: 400px;">
+      <svg viewBox="0 0 800 400" style="width: 100%; height: 100%;">
+       
+        <g stroke="#374151" stroke-width="1" opacity="0.3">
+          <line x1="80" y1="50" x2="80" y2="320"/>
+          <line x1="80" y1="320" x2="720" y2="320"/>
+          
+         
+          <line x1="80" y1="80" x2="720" y2="80" stroke-dasharray="5,5"/>
+          <line x1="80" y1="140" x2="720" y2="140" stroke-dasharray="5,5"/>
+          <line x1="80" y1="200" x2="720" y2="200" stroke-dasharray="5,5"/>
+          <line x1="80" y1="260" x2="720" y2="260" stroke-dasharray="5,5"/>
+        </g>
+        
+        
+        <g fill="#9ca3af" font-size="12">
+          <text x="70" y="85" text-anchor="end">$4,000</text>
+          <text x="70" y="145" text-anchor="end">$3,000</text>
+          <text x="70" y="205" text-anchor="end">$2,000</text>
+          <text x="70" y="265" text-anchor="end">$1,000</text>
+          <text x="70" y="325" text-anchor="end">$0</text>
+        </g>
+        
+      
+        <g fill="#9ca3af" font-size="12">
+          <text x="140" y="345" text-anchor="middle">Nov</text>
+          <text x="260" y="345" text-anchor="middle">Dec</text>
+          <text x="380" y="345" text-anchor="middle">Jan</text>
+          <text x="500" y="345" text-anchor="middle">Feb</text>
+          <text x="620" y="345" text-anchor="middle">Mar</text>
+        </g>
+        
+        <polyline
+          points="140,180 260,160 380,140 500,120 620,110"
+          fill="none"
+          stroke="#ef4444"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        
+       
+        <polyline
+          points="140,200 260,190 380,185 500,180 620,175"
+          fill="none"
+          stroke="#10b981"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        
+      
+        <g fill="#ef4444">
+          <circle cx="140" cy="180" r="5"/>
+          <circle cx="260" cy="160" r="5"/>
+          <circle cx="380" cy="140" r="5"/>
+          <circle cx="500" cy="120" r="5"/>
+          <circle cx="620" cy="110" r="5"/>
+        </g>
+        
+     
+        <g fill="#10b981">
+          <circle cx="140" cy="200" r="5"/>
+          <circle cx="260" cy="190" r="5"/>
+          <circle cx="380" cy="185" r="5"/>
+          <circle cx="500" cy="180" r="5"/>
+          <circle cx="620" cy="175" r="5"/>
+        </g>
+        
+        <g>
+          <rect x="600" y="60" width="100" height="60" fill="#1f2937" stroke="#374151" rx="5"/>
+          <line x1="610" y1="80" x2="630" y2="80" stroke="#ef4444" stroke-width="3"/>
+          <text x="635" y="84" fill="#f9fafb" font-size="12">Spending</text>
+          <line x1="610" y1="100" x2="630" y2="100" stroke="#10b981" stroke-width="3"/>
+          <text x="635" y="104" fill="#f9fafb" font-size="12">Income</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  
+  <div class="grid grid-cols-3" style="margin-top: 2rem;">
+    <div class="card">
+      <h4>Spending Trend</h4>
+      <div style="margin-top: 1rem;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--success-color);">-15%</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">vs last 3 months</div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background: var(--darker-bg); border-radius: 0.5rem;">
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">
+            Your spending has decreased consistently over the past 3 months, showing good financial discipline.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Income Stability</h4>
+      <div style="margin-top: 1rem;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-color);">Stable</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">±2% variation</div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background: var(--darker-bg); border-radius: 0.5rem;">
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">
+            Consistent income flow with minimal fluctuations, providing reliable financial foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Savings Rate</h4>
+      <div style="margin-top: 1rem;">
+        <div style="font-size: 2rem; font-weight: 700; color: var(--success-color);">24%</div>
+        <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">+4% improvement</div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background: var(--darker-bg); border-radius: 0.5rem;">
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">
+            Excellent savings rate exceeding the recommended 20% for long-term financial health.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="card" style="margin-top: 2rem;">
+    <h3>Category Trends</h3>
+    <div class="grid grid-cols-2" style="margin-top: 1.5rem;">
+   
+      <div>
+        <h4 style="color: var(--danger-color); margin-bottom: 1rem;">📈 Increasing</h4>
+        <div class="trend-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+          <div>
+            <div style="font-weight: 600;">🍔 Food & Dining</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">+12% this month</div>
+          </div>
+          <div style="color: var(--danger-color); font-weight: 600;">+$92</div>
+        </div>
+        
+        <div class="trend-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0;">
+          <div>
+            <div style="font-weight: 600;">🎮 Entertainment</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">+8% this month</div>
+          </div>
+          <div style="color: var(--danger-color); font-weight: 600;">+$26</div>
+        </div>
+      </div>
+
+     
+      <div>
+        <h4 style="color: var(--success-color); margin-bottom: 1rem;">📉 Decreasing</h4>
+        <div class="trend-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+          <div>
+            <div style="font-weight: 600;">🚗 Transportation</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">-15% this month</div>
+          </div>
+          <div style="color: var(--success-color); font-weight: 600;">-$73</div>
+        </div>
+        
+        <div class="trend-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0;">
+          <div>
+            <div style="font-weight: 600;">🏠 Housing</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary);">-5% this month</div>
+          </div>
+          <div style="color: var(--success-color); font-weight: 600;">-$57</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="card" style="margin-top: 2rem;">
+    <h3>Monthly Forecast</h3>
+    <div style="margin-top: 1.5rem;">
+      <div class="forecast-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--darker-bg); border-radius: 0.75rem; margin-bottom: 1rem;">
+        <div>
+          <div style="font-weight: 600; margin-bottom: 0.5rem;">Expected Monthly Spending</div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">Based on current trends</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--danger-color);">$3,150</div>
+          <div style="font-size: 0.875rem; color: var(--success-color);">-4% vs current</div>
+        </div>
+      </div>
+
+      <div class="forecast-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--darker-bg); border-radius: 0.75rem;">
+        <div>
+          <div style="font-weight: 600; margin-bottom: 0.5rem;">Projected Savings</div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">If trends continue</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--success-color);">$350</div>
+          <div style="font-size: 0.875rem; color: var(--success-color);">+59% improvement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
